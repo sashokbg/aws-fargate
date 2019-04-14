@@ -9,7 +9,7 @@ services:
       options:
         awslogs-group: ecs-frontend
         awslogs-region: eu-west-2
-        awslogs-stream-prefix: frontend
+#        awslogs-stream-prefix: frontend
   api:
     image: "510124956856.dkr.ecr.eu-west-2.amazonaws.com/ecs-backend"
     ports:
@@ -19,4 +19,4 @@ services:
       options:
         awslogs-group: ecs-backend
         awslogs-region: eu-west-2
-        awslogs-stream-prefix: backend
+#        awslogs-stream-prefix: backend

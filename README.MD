@@ -5,12 +5,17 @@ https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_Configuration.html
 
 ## Push images to ECR
-
+ 
 ```
 ecs-cli push ecs-frontend:latest
 ecs-cli push ecs-backend:latest
 ```
 
+NB: To login to ECR via docker
+
+```
+aws ecr get-login --no-include-email
+```
 
 ## Create ECS Fargate Cluster
 
