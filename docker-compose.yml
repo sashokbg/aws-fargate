@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: "510124956856.dkr.ecr.eu-west-2.amazonaws.com/ecs-frontend"
+    image: "510124956856.dkr.ecr.eu-west-2.amazonaws.com/ecs-frontend:latest"
     ports:
       - "80:80"
     logging:
@@ -9,9 +9,9 @@ services:
       options:
         awslogs-group: ecs-frontend
         awslogs-region: eu-west-2
-#        awslogs-stream-prefix: frontend
+        awslogs-stream-prefix: frontend
   api:
-    image: "510124956856.dkr.ecr.eu-west-2.amazonaws.com/ecs-backend"
+    image: "510124956856.dkr.ecr.eu-west-2.amazonaws.com/ecs-backend:latest"
     ports:
       - "8080:8080"
     logging:
@@ -19,4 +19,4 @@ services:
       options:
         awslogs-group: ecs-backend
         awslogs-region: eu-west-2
-#        awslogs-stream-prefix: backend
+        awslogs-stream-prefix: backend
